@@ -1,12 +1,12 @@
 body {
-            background: #99CC99;
+            background: #226765;
             color: #000000;
             font-family: Trebuchet MS, Arial, Times New Roman;
             font-size: 12px;
 }
  
 #container {
-            background:#99CC99;
+            background:#226765;
             margin: 10px auto;
 			padding: 10px auto;
             width: 100%;
@@ -29,14 +29,14 @@ body {
 
  
 #header {
-            background: #66CCCC;
+            background: #70A897;
             height: 70px;
             width: 100%px;
 }
  
  
 #leftinput {
-            background: #BC8C32;
+            background: #679B99;
 			border: 2px solid black;
 			float: left;
             width: 47%;
@@ -56,7 +56,7 @@ body {
 
 
 #rightinput {
-            background: #d2d0d2;
+            background: #679B99;
 			border: 2px solid black;
 			float: right;
             width: 47%;
@@ -78,7 +78,7 @@ body {
 
  
 #footer {
-            background: #84D372;
+            background: #486E88;
 			position: fixed;
 			left: 0; bottom: 0;
             height: 40px;
