@@ -3,12 +3,12 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
             <title>домашка</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<script src="jquery-2.2.0.min.js"></script>
 <SCRIPT LANGUAGE="JavaScript">
 
 window.onload= function(){
-$("#findstart").keyup(function(){ 
+$("#findstart").keyup(function(){
 var textarray= $("#rightinput li.area");
 
 if (textarray){
@@ -23,92 +23,92 @@ else {textarray[i].hidden=true;}
 
  })
 }
- 
+
 function remove1(context){
 var element = context.parentElement;
 
 element.parentElement.removeChild(element);
 }
 
-function make_list() 
+function make_list()
 {
    var Txt1 = "";
    var Txt2 = "";
-    	
+
             Txt1 = $("#textmultiline1")[0].value;
             Txt2 = $("#tel")[0].value;
 			$("#formout").append('<li class="area"><textarea class="area">'+Txt1+' '+Txt2+'  </textarea> <div class="closeButton" onclick="remove1(this)">X</div></li>');
-			
+
 }
 
 
 </SCRIPT>
 <SCRIPT LANGUAGE="JavaScript">
 /* Блокировка набора букв*/
-function field_input_control(evn, pattern) 
+function field_input_control(evn, pattern)
 {
- 
+
     evn = evn || window.event;
     var sender = evn.target || evn.srcElement;
     var isIE = document.all;
- 
+
     if (sender.tagName.toUpperCase()=='INPUT')
     {
         var keyPress = isIE ? evn.keyCode : evn.which;
- 
+
         if (keyPress < 32 || evn.altKey || evn.ctrlKey)
             return true;
- 
+
         var symbPress = String.fromCharCode(keyPress);
- 
+
         if (!pattern.test(symbPress))
             return false;
- 
+
     }
- 
+
     return true;
-	
+
 	}
 </SCRIPT>
 </head>
- 
+
 <body>
 
 <div id="container">
 	<div id="header">
-	<div id="header_pic"><img src="1.jpg" height="60" width="60"></div>
+	<div id="header_pic"><img src="pic/1.jpg" height="60" width="60"></div>
 	<div id="header_fio"> <h2>Иванов Василий</h2></div>
 	<div id="Header_contact">e-mail: mail@mail.ru<br>phone: 8 800 800 1111 </div>
-	
+
 	</div>
-		 
+
 	<div id="leftinput">
 		<div id="formin">
 		<div id="area">
 			<p><textarea class="area" id="textmultiline1" value="текст">Иванов Александр</textarea></p>
 			<p><input type="text" class="edit" id="tel" value="123456" onkeypress="return field_input_control(event, /\d/);" /></p>
 			<p><input type="button" class="button" value= "Add" onclick="make_list()"></p>
-		
+
 		</div>
 		</div>
-	
+
 	</div>
-		 
+
 	<div id="rightinput">
 		<ul id="formout">
-		
+
 		</ul>
-		</div>	
-	
+		</div>
+
 	<div id="footer">
-	<div id="find"> 
-	<p><input id="findstart" type="text" class="edit"  name="fieldfind"  /></p> 
-	
-	
+	<div id="find">
+	<p><input id="findstart" type="text" class="edit"  name="fieldfind"  /></p>
+
+
 	</div>
-	
+
 		</div>
 </div>
-		 
+
 </body>
 </html>
